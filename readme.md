@@ -1,5 +1,6 @@
 This app was built using the full Mean Stack. 
-Mongo/Mlab, Express, Angular and Node.js :)
+<br>
+Mongo/Mlab, Express, Angular and Node.js !
 
 For the angular2 front end.
 
