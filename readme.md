@@ -7,7 +7,7 @@ For the angular2 front end.
 To load this application on your machine, please take these following steps:
 
 First, you will need to have Git and NPM installed on your computer..
-Once you have git and npm installed then please follow the steps below:
+Once you have git and npm installed then please follow these steps below:
 
 Make a new working folder directory on your computer
 Then in your terminal at the working directory
