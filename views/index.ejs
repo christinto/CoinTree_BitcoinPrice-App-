@@ -6,7 +6,7 @@
 		<!-- from downloading from https://angularjs.org/ The script tag downloads javascript and runs it
 		//doesn't get downloaded or processed by node at all.. pure browser client end -->
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
-		
+		<script src="/bower_components/angular-percentage-filter/percentage.js"></script>
 	</head>
 
 	<body>
@@ -16,10 +16,11 @@
 		<br>
 		Last Bitcoin Price $AUD : {{lastprice}}
 		<br>
-		BTC/$AUD Price %age change  : {{percentagechange}}
+		BTC/$AUD Price %age change  : {{percentagechange | number:5}}%
+		<!-- built n number feature another way to keep decimals to 2 places-->
 		<br>
 		<br>
-		Price %age change Since Last App Startup : {{percentagechangestart}}
+		Price %age change Since Last App Startup : {{percentagechangestart | number:5}}%
 		<br>
 		<br>
 		
