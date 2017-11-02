@@ -1,0 +1,40 @@
+<!-- angular seaerches for PriceApp in our app.js in public folder-->
+<html ng-app="PriceApp">
+
+	<head>
+		<title>CoinTree Price app!</title>
+		<!-- from downloading from https://angularjs.org/ The script tag downloads javascript and runs it
+		//doesn't get downloaded or processed by node at all.. pure browser client end -->
+    	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
+		
+	</head>
+
+	<body>
+		<div ng-controller="priceCtrl">
+		<p>
+		Current Bitcoin Price $AUD : {{currentprice}}
+		<br>
+		Last Bitcoin Price $AUD : {{lastprice}}
+		<br>
+		BTC/$AUD Price %age change  : {{percentagechange}}
+		<br>
+		<br>
+		Price %age change Since Last App Startup : {{percentagechangestart}}
+		<br>
+		<br>
+		
+		Price check - please enter your preferred price for Bitcoin and see a response in price difference from your price bid and the current value of bitcoin : <input type="number" ng-model="priceEntry"><br> 
+		
+		</p>
+		<div>
+		
+			* Price refreshes every 30 seconds
+		
+		</div>
+		</div>
+	 <script>
+	 </script>
+
+	 <script src="/assets/js/app.js"></script>
+	</body>
+</html>
