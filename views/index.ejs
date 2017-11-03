@@ -17,21 +17,37 @@
 		Last Bitcoin Price $AUD : {{lastprice}}
 		<br>
 		BTC/$AUD Price %age change  : {{percentagechange | number:5}}%
-		<!-- built n number feature another way to keep decimals to 2 places-->
+		<!-- inbuilt number directive another way to keep to x amount of decimals places-->
 		<br>
 		<br>
 		Price %age change Since Last App Startup : {{percentagechangestart | number:5}}%
 		<br>
-		<br>
-		
-		Price check - please enter your preferred price for Bitcoin and see a response in price difference from your price bid and the current value of bitcoin : <input type="number" ng-model="priceEntry"><br> 
-		
 		</p>
+		<br>
+
+<!-- Below code is for the textbox. Refer to example on angular.io // Want input type="number"-->
+<form name="myForm">
+		<label> Please enter your preferred BTC Price in ($aud): <input type="number" name="input" ng-model="priceEntry.numberEnter" ng-pattern="priceEntry.numberPattern" required ng-trim="false">
+	   </label>
+	<div role="alert">
+    <span class="error" ng-show="myForm.input.$error.required">
+      Price Required!</span>
+    <span class="error" ng-show="myForm.input.$error.pattern">
+      Single value only!</span>
+  </div>
+  <code>Price difference from your preferred BTC price = {{priceEntry.numberEnter - currentprice }}</code><br/>
+  <code>myForm.input.$valid = {{myForm.input.$valid}}</code><br/>
+  <code>myForm.input.$error = {{myForm.input.$error}}</code><br/>
+  <code>myForm.$valid = {{myForm.$valid}}</code><br/>
+  <code>myForm.$error.required = {{!!myForm.$error.required}}</code><br/>
+ </form>
 		<div>
 		
 			* Price refreshes every 30 seconds
-		
+			<br>
+			
 		</div>
+
 		</div>
 	 <script>
 	 </script>

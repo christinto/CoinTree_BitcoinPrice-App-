@@ -5,7 +5,8 @@ angular.module('PriceApp',[]);
 
 var app = angular.module('PriceApp', []);
 
-app.controller('priceCtrl', function($scope, $http, $interval) {
+//pre-text box line, app.controller('priceCtrl', function($scope, $http, $interval) {
+app.controller('priceCtrl', ['$scope','$http','$interval', function($scope, $http, $interval) {    
   this.loadNotifications = function(){
     $http.get("/getLatestPrice")
     .then(function(response) {
@@ -36,6 +37,7 @@ app.controller('priceCtrl', function($scope, $http, $interval) {
         $interval.cancel(theInterval)
     });
 
+//code that we only want to run once at start of application goes here
 this.loadPriceChangeSinceLastStartup = function(){
     $http.get("/getLatestPrice")
     .then(function(response) {
@@ -57,10 +59,19 @@ this.loadPriceChangeSinceLastStartup = function(){
       }
    });
  };
- //invoke initially
+ //invokes initially
  this.loadPriceChangeSinceLastStartup();
+ 
 
-});
+ //number or text pattern to only allow one value and certain types of keys to be input to textbox
+ //$scope.onlyNumbers = /^[\u0030-\u0039]+$/; OR $scope.onlyNumbers = /^[0-9]+$/;
+ //If this was for text could use this pattern>> wordPattern: /^\s*\w*\s*$/
+$scope.priceEntry = {
+  numberEnter: 'Please enter your preferred price',
+  numberPattern: /^[0-9]+$/
+};
+
+}]);
 
 
 
