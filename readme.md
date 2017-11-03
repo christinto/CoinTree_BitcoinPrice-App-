@@ -9,7 +9,8 @@ To load this application on your machine, please take these following steps:
 First, you will need to have Git and NPM installed on your computer..
 Once you have git and npm installed then please follow these steps below:
 
-Make a new working folder directory on your computer
+Make a new working folder directory on your computer.
+<br>
 Then in your terminal at the working directory
 1. git clone https://github.com/christinto/CoinTree_BitcoinPrice-App-.git
 
