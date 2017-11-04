@@ -8,14 +8,17 @@
     	<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.js"></script>
 		<script src="/bower_components/angular-percentage-filter/percentage.js"></script>
 		<style>
-img { 
+	img { 
     width:100%; 
-}
-</style>
+		}	
+		</style>
+		<link rel="stylesheet" type="text/css" href="/assets/css/mystyle.css">
 	</head>
 
 	<body>
+	<h1 style="font-size:20px;" align="center" class="italic">Bitcoin Price App!</h1>
 		<div ng-controller="priceCtrl">
+
 		<p>
 		Current Bitcoin Price $AUD : {{currentprice}}
 		<br>
