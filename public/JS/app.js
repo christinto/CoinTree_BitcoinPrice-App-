@@ -20,11 +20,13 @@ app.controller('priceCtrl', ['$scope','$http','$interval', function($scope, $htt
           $scope.percentagechange = percentagechangeCalc;
           $scope.currentprice = response.data.currentPrices.spotPrice;
           $scope.lastprice = response.data.lastPrices.spotPrice;
+          $scope.CurrentDate = new Date();
         }
         else {
           $scope.percentagechange = 'Data unavailable';
           $scope.currentprice = 'Data unavailable';
           $scope.lastprice = 'Data unavailable';
+          $scope.CurrentDate = 'Data unavailable';
         }
      });
     };
