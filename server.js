@@ -8,7 +8,8 @@ const bodyParser     = require('body-parser');
 const app            = express();
 const db             = require('./config/db');
 
-const port = 8085;
+//const port = 8085;
+const port = web.1;
 
 //front end angular related
 app.set('view engine', 'ejs');
@@ -27,6 +28,7 @@ MongoClient.connect(db.url, (err, database) => {
 require('./app/routes')(app, database);
 require('./app/routes')(app, {});
 
+//change for heroku hosting, dynamically assigned.
   app.listen(port, () => {
     console.log('We are live on ' + port);
   });
