@@ -8,9 +8,10 @@ const bodyParser     = require('body-parser');
 const app            = express();
 const db             = require('./config/db');
 
-//for running locally const port = 8085;
+//for running locally 
+const port = 8085;
 //for Heroku dynamic port
-const port = process.env.PORT || 5000;
+//const port = process.env.PORT || 5000;
 
 //front end angular related
 app.set('view engine', 'ejs');
